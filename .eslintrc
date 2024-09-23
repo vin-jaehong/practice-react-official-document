@@ -5,7 +5,9 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier"
+    "prettier",
+    "plugin:react-hooks/recommend",
+    "react-app"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
