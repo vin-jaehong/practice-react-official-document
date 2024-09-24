@@ -1,7 +1,7 @@
-import PackingList from 'components/PackingList';
+import PeopleList from 'components/PeopleList';
 
 function App() {
-  return <PackingList />;
+  return <PeopleList />;
 }
 
 export default App;
