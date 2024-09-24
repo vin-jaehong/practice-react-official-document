@@ -6,7 +6,7 @@ function Cup() {
   return <h2>Tea cup for guest #{guest}</h2>;
 }
 
-export default function TeaSet() {
+export default function TrashCode() {
   return (
     <>
       <Cup />
