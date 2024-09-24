@@ -1,5 +1,25 @@
-export default function Avatar() {
-  const avatar = 'https://i.imgur.com/7vQD0fPs.jpg';
-  const description = 'Gregorio Y. Zara';
-  return <img className="avatar" src={avatar} alt={description} />;
+interface Person {
+  name: string;
+  imageId: string;
+}
+
+interface AvatarProps {
+  person: Person;
+  size: number;
+}
+
+export default function Avatar({ person, size }: AvatarProps) {
+  const getImageUrl = (person: Person, size = 's') => {
+    return 'https://i.imgur.com/' + person.imageId + size + '.jpg';
+  };
+
+  return (
+    <img
+      className="avatar"
+      src={getImageUrl(person)}
+      alt={person.name}
+      width={size}
+      height={size}
+    />
+  );
 }
