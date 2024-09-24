@@ -1,7 +1,7 @@
-import Profile from 'components/Profile';
+import PackingList from 'components/PackingList';
 
 function App() {
-  return <Profile />;
+  return <PackingList />;
 }
 
 export default App;
