@@ -1,7 +1,7 @@
-import PeopleList from 'components/PeopleList';
+import TrashCode from 'components/TrashCode';
 
 function App() {
-  return <PeopleList />;
+  return <TrashCode />;
 }
 
 export default App;
