@@ -1,4 +1,4 @@
-import TrashCode from 'components/TrashCode';
+import { TrashCode } from 'components/TrashCode';
 
 function App() {
   return <TrashCode />;
