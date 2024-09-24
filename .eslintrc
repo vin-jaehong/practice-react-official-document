@@ -6,7 +6,7 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "prettier",
-    "plugin:react-hooks/recommend",
+    "plugin:react-hooks/recommended",
     "react-app"
   ],
   "parserOptions": {

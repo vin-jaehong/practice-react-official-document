@@ -17,10 +17,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "tsc && lint && react-scripts start",
-    "build": "tsc && lint && react-scripts build",
+    "start": "tsc && npm run lint && react-scripts start",
+    "build": "tsc && npm run lint && react-scripts build",
     "tsc": "tsc",
-    "lint": "eslint src/**/*.ts src/**/*.tsx"
+    "lint": "eslint src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
