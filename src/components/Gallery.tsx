@@ -1,6 +1,8 @@
-import { Profile } from './Profile';
+export const Profile = () => {
+  return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;
+};
 
-export const Gallery = () => {
+const Gallery = () => {
   return (
     <section>
       <h1>Amazing scientists</h1>
@@ -10,3 +12,5 @@ export const Gallery = () => {
     </section>
   );
 };
+
+export default Gallery;
