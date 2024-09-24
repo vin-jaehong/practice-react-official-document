@@ -1,8 +1,7 @@
-import { Profile } from './components/Gallery';
-// import Gallery from './components/Gallery';
+import Bio from 'components/Bio';
 
 function App() {
-  return <Profile />;
+  return <Bio />;
 }
 
 export default App;
