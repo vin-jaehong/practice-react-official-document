@@ -5,6 +5,5 @@ export const Button = () => {
     alert(text);
   };
 
-  // 아래 이벤트 핸들러 호출부가 랜더링시 바로 실행 됨.
-  return <button onClick={handleClick('test')}>Click me</button>;
+  return <button onClick={() => handleClick('test')}>Click me</button>;
 };
