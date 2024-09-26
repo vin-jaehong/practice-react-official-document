@@ -1,8 +1,8 @@
 export const SignUp = () => {
   return (
     <form
-      onSubmit={() => {
-        // e.preventDefault();
+      onSubmit={(e) => {
+        e.preventDefault();
         alert('Submitting!');
       }}
     >
