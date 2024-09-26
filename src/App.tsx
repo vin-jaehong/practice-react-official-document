@@ -1,7 +1,11 @@
-import { TrashCode } from 'components/TrashCode';
+import { Button } from 'components/Button';
 
 function App() {
-  return <TrashCode />;
+  return (
+    <>
+      <Button />
+    </>
+  );
 }
 
 export default App;
