@@ -1,9 +1,9 @@
-import { Toolbar } from 'components/Button';
+import { SignUp } from 'components/SignUp';
 
 function App() {
   return (
     <>
-      <Toolbar />
+      <SignUp />
     </>
   );
 }
