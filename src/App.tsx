@@ -1,9 +1,9 @@
-import { Button } from 'components/Button';
+import { Toolbar } from 'components/Button';
 
 function App() {
   return (
     <>
-      <Button />
+      <Toolbar />
     </>
   );
 }

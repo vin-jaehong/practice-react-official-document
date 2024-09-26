@@ -1,9 +1,32 @@
-export const Button = () => {
-  // 이벤트 핸들러 네이밍은 관습적으로 handle + 이벤트 종류 + @
-  // camelCase로 작성
-  const handleClick = (text: string) => {
-    alert(text);
+const Button = ({
+  onClick,
+  children
+}: {
+  onClick: () => void;
+  children: React.ReactNode;
+}) => {
+  return <button onClick={onClick}>{children}</button>;
+};
+
+const PlayButton = ({ movieName }: { movieName: string }) => {
+  const handlePlayClick = () => {
+    alert(`Playing ${movieName}!`);
   };
 
-  return <button onClick={() => handleClick('test')}>Click me</button>;
+  return (
+    <Button onClick={handlePlayClick}>Play &quot;{movieName}&quot;</Button>
+  );
+};
+
+const UploadButton = () => {
+  return <Button onClick={() => alert('Uploading!')}>Upload Image</Button>;
+};
+
+export const Toolbar = () => {
+  return (
+    <div>
+      <PlayButton movieName="Kiki's Delivery Service" />
+      <UploadButton />
+    </div>
+  );
 };
