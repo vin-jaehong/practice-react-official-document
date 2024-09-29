@@ -8,11 +8,12 @@ export const Counter = () => {
       <h1>{number}</h1>
       <button
         onClick={() => {
-          setNumber(number + 5);
-          alert(number);
+          setNumber((n) => n + 1);
+          setNumber((n) => n + 1);
+          setNumber((n) => n + 1);
         }}
       >
-        +5
+        +3
       </button>
     </>
   );
