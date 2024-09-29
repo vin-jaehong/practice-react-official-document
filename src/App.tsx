@@ -1,9 +1,9 @@
-import { Counter } from 'components/Counter';
+import { PointerMovingDot } from 'components/PointerMovingDot';
 
 function App() {
   return (
     <>
-      <Counter />
+      <PointerMovingDot />
     </>
   );
 }
