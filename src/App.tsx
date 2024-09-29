@@ -1,9 +1,9 @@
-import { TestForm } from 'components/TestForm';
+import { TestList } from 'components/TestList';
 
 function App() {
   return (
     <>
-      <TestForm />
+      <TestList />
     </>
   );
 }
