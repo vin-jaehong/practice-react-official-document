@@ -1,32 +1,20 @@
-const Button = ({
-  onClick,
-  children
-}: {
-  onClick: () => void;
-  children: React.ReactNode;
-}) => {
-  return <button onClick={onClick}>{children}</button>;
-};
+import { useState } from 'react';
 
-const PlayButton = ({ movieName }: { movieName: string }) => {
-  const handlePlayClick = () => {
-    alert(`Playing ${movieName}!`);
-  };
+export const Button = () => {
+  const [number, setNumber] = useState(0);
 
-  return (
-    <Button onClick={handlePlayClick}>Play &quot;{movieName}&quot;</Button>
-  );
-};
-
-const UploadButton = () => {
-  return <Button onClick={() => alert('Uploading!')}>Upload Image</Button>;
-};
-
-export const Toolbar = () => {
   return (
     <div>
-      <PlayButton movieName="Kiki's Delivery Service" />
-      <UploadButton />
+      <p>Number: {number}</p>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+          setNumber(number + 1);
+          setNumber(number + 1);
+        }}
+      >
+        +3
+      </button>
     </div>
   );
 };

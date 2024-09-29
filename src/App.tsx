@@ -1,9 +1,9 @@
-import { SignUp } from 'components/SignUp';
+import { Button } from 'components/Button';
 
 function App() {
   return (
     <>
-      <SignUp />
+      <Button />
     </>
   );
 }
