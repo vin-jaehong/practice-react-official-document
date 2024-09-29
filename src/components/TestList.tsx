@@ -1,40 +1,61 @@
 import { useState } from 'react';
 
-let nextId = 3;
-const initialArtists = [
-  { id: 0, name: 'Marta Colvin Andrade' },
-  { id: 1, name: 'Lamidi Olonade Fakeye' },
-  { id: 2, name: 'Louise Nevelson' }
+const initialList = [
+  { id: 0, title: 'Big Bellies', seen: false },
+  { id: 1, title: 'Lunar Landscape', seen: false },
+  { id: 2, title: 'Terracotta Army', seen: true }
 ];
 
 export const TestList = () => {
-  const [name, setName] = useState('');
-  const [artists, setArtists] = useState(initialArtists);
+  const [myList, setMyList] = useState(initialList);
+  const [yourList, setYourList] = useState(initialList);
 
-  function handleClick() {
-    const insertAt = 1; // 모든 인덱스가 될 수 있습니다.
-    const nextArtists = [
-      // 삽입 지점 이전 항목
-      ...artists.slice(0, insertAt),
-      // 새 항목
-      { id: nextId++, name: name },
-      // 삽입 지점 이후 항목
-      ...artists.slice(insertAt)
-    ];
-    setArtists(nextArtists);
-    setName('');
-  }
+  const handleToggleMyList = (artworkId: number, nextSeen: boolean) => {
+    const myNextList = [...myList];
+    const artwork = myNextList.find((a) => a.id === artworkId);
+    if (artwork) {
+      artwork.seen = nextSeen;
+    }
+    setMyList(myNextList);
+  };
+
+  const handleToggleYourList = (artworkId: number, nextSeen: boolean) => {
+    const yourNextList = [...yourList];
+    const artwork = yourNextList.find((a) => a.id === artworkId);
+    if (artwork) {
+      artwork.seen = nextSeen;
+    }
+    setYourList(yourNextList);
+  };
 
   return (
     <>
-      <h1>Inspiring sculptors:</h1>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-      <button onClick={handleClick}>Insert</button>
-      <ul>
-        {artists.map((artist) => (
-          <li key={artist.id}>{artist.name}</li>
-        ))}
-      </ul>
+      <h1>Art Bucket List</h1>
+      <h2>My list of art to see:</h2>
+      <ItemList artworks={myList} onToggle={handleToggleMyList} />
+      <h2>Your list of art to see:</h2>
+      <ItemList artworks={yourList} onToggle={handleToggleYourList} />
     </>
+  );
+};
+
+const ItemList = ({ artworks, onToggle }: { artworks: any; onToggle: any }) => {
+  return (
+    <ul>
+      {artworks.map((artwork: any) => (
+        <li key={artwork.id}>
+          <label>
+            <input
+              type="checkbox"
+              checked={artwork.seen}
+              onChange={(e) => {
+                onToggle(artwork.id, e.target.checked);
+              }}
+            />
+            {artwork.title}
+          </label>
+        </li>
+      ))}
+    </ul>
   );
 };
