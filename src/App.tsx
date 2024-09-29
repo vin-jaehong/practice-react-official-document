@@ -1,9 +1,9 @@
-import { PointerMovingDot } from 'components/PointerMovingDot';
+import { TestForm } from 'components/TestForm';
 
 function App() {
   return (
     <>
-      <PointerMovingDot />
+      <TestForm />
     </>
   );
 }
