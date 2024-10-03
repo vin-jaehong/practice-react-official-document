@@ -1,9 +1,9 @@
-import { TestList } from 'components/TestList';
+import { Counter } from 'components/Counter';
 
 function App() {
   return (
     <>
-      <TestList />
+      <Counter />
     </>
   );
 }

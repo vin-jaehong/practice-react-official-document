@@ -1,20 +1,12 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 
 export const Counter = () => {
-  const [number, setNumber] = useState(0);
+  const ref = useRef(0);
 
-  return (
-    <>
-      <h1>{number}</h1>
-      <button
-        onClick={() => {
-          setNumber(number + 5);
-          setNumber((n) => n + 1);
-          setNumber(42);
-        }}
-      >
-        Increase the number
-      </button>
-    </>
-  );
+  const handleClick = () => {
+    ref.current = ref.current + 1;
+    alert('You clicked ' + ref.current + ' times!');
+  };
+
+  return <button onClick={handleClick}>Click me!</button>;
 };
