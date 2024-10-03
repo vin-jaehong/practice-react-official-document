@@ -1,9 +1,9 @@
-import Counter from 'components/Counter';
+import ChatRoom from './components/ChatRoom';
 
 function App() {
   return (
     <>
-      <Counter />
+      <ChatRoom />
     </>
   );
 }
