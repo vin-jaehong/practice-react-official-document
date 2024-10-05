@@ -14,9 +14,7 @@ const createConnection = () => {
 
 export default function ChatRoom() {
   const memoizedFilterList = useMemo(() => {
-    console.time('filter');
     const result = testList.filter((item) => item.id > 10);
-    console.timeEnd('filter');
     return result;
   }, []);
 
