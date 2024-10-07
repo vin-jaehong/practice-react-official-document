@@ -1,9 +1,11 @@
-import { Chat } from './components/ChatRoom';
+import { StatusBar } from './components/StatusBar';
+import { SaveButton } from './components/SaveButton';
 
 function App() {
   return (
     <>
-      <Chat />
+      <StatusBar />
+      <SaveButton />
     </>
   );
 }
