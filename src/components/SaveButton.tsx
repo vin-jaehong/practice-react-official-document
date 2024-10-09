@@ -1,21 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useOnlineStatus } from '../hooks/useOnlineStatus';
 
 export const SaveButton = () => {
-  const [isOnline, setIsOnline] = useState(true);
-  useEffect(() => {
-    function handleOnline() {
-      setIsOnline(true);
-    }
-    function handleOffline() {
-      setIsOnline(false);
-    }
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
+  const isOnline = useOnlineStatus();
 
   function handleSaveClick() {
     console.log('✅ 진행사항 저장됨');
