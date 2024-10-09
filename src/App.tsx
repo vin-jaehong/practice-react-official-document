@@ -1,11 +1,9 @@
-import { StatusBar } from './components/StatusBar';
-import { SaveButton } from './components/SaveButton';
+import { Welcome } from './components/Welcome';
 
 function App() {
   return (
     <>
-      <StatusBar />
-      <SaveButton />
+      <Welcome />
     </>
   );
 }
