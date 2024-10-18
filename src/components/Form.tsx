@@ -3,7 +3,6 @@ import { forwardRef, useRef, useImperativeHandle } from 'react';
 const MyInput = forwardRef((props, ref) => {
   const realInputRef = useRef<HTMLInputElement>(null);
   useImperativeHandle(ref, () => ({
-    // 오직 focus만 노출
     focus() {
       realInputRef.current?.focus();
     }
